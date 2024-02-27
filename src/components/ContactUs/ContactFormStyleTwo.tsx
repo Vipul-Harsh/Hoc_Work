@@ -4,7 +4,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import ContactInfo from "./ContactInfo";
 import Image from "next/image";
 
-import contactImg from "../../../public/images/contact/contact.png";
+import contactImg from "../../../public/images/contact/rubber-plant-wooden-sideboard-table.jpg";
 import shape from "../../../public/images/contact/shape.png";
 
 interface FormData {
@@ -126,7 +126,7 @@ const ContactFormStyleTwo: React.FC = () => {
                         ></textarea>
                       </div>
 
-                      <button type="submit" className="default-btn">
+                      <button type="submit" style={{background:"#FFCF4A",padding:"16px",border:"none",color:"white"}}>
                         Send Message Now
                       </button>
                     </form>

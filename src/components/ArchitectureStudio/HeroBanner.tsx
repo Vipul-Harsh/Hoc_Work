@@ -7,12 +7,12 @@ import ReactCompareImage from "react-compare-image";
 const HeroBanner: React.FC = () => {
   return (
     <>
-      <div className="as-banner-area">
+      <div className="as-banner-area" >
         <div className="container-fluid">
           <div className="as-banner-image">
-            <ReactCompareImage
-              leftImage="/images/main-banner/as-banner-after.jpg"
-              rightImage="/images/main-banner/as-banner-before.jpg"
+            <ReactCompareImage 
+              leftImage="/images/main-banner/Untitled design.png"
+              rightImage="/images/main-banner/plant-empty-room-with-gray-wall-mockup.jpg"
             />
           </div>
 
@@ -24,17 +24,11 @@ const HeroBanner: React.FC = () => {
             data-aos-once="false"
           >
             <h1>
-              Transforming Spaces with <b>Traz</b> Design Magic
+            Elevate Your Space with  <b>HOC Furniture</b> Design Magic
             </h1>
           </div>
 
-          <div className="as-banner-bottom-content d-flex align-items-center justify-content-between">
-            <p>
-              We build cities through a unique combination of engineering,
-              construction and design.
-            </p>
-            <Link href="/portfolio">SEE CASE STUDIES</Link>
-          </div>
+         
         </div>
       </div>
     </>

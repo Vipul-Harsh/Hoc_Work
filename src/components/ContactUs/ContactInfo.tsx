@@ -27,13 +27,13 @@ const ContactInfo: React.FC = () => {
       <ul className="contact-info-list">
         <li>
           <span>ADDRESS</span>
-          123 Maple Street Toronto, Ontario M1A 1A1 Canada
+          Sector 63,Noida, Uttar Pradesh 201301
         </li>
 
         <li>
           <span>CONTACT</span>
-          <a href="mailto:helltraz@gmail.com">helltraz@gmail.com</a>
-          <a href="tel:15551234567">+1 555-123-4567</a>
+          <a href="mailto:helltraz@gmail.com">connect@houseofchitrakoot.in</a>
+          <a href="tel:15551234567">+91 961-913-5029 | 7838604935</a>
         </li>
 
         <li>

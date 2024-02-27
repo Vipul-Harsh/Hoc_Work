@@ -571,8 +571,8 @@ Architecture Studio Banner Area CSS
   display: none;
 }
 .as-banner-image .icv__circle {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: var(--whiteColor);
   box-shadow: unset !important;
   -webkit-backdrop-filter: unset !important;
@@ -2060,7 +2060,7 @@ Client Area CSS
 }
 
 .client-swiper .swiper-pagination .swiper-pagination-bullet {
-  background-color: var(--primaryColor);
+  background-color:#FFBB00;
   width: 10px;
   height: 10px;
 }
@@ -2534,7 +2534,7 @@ Contact Area CSS
 }
 .contact-area.bg-white-wrap .contact-form-wrap .title span {
   font-weight: 500;
-  color: var(--primaryColor);
+  color: #FFCF4A;
   font-size: 15px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -2573,13 +2573,13 @@ Contact Area CSS
   color: #6C6661;
 }
 .contact-area.bg-white-wrap .contact-info-list li a:hover {
-  color: var(--primaryColor);
+  color: #FFCF4A;
 }
 .contact-area.bg-white-wrap .contact-info-list li .social li a {
   color: var(--blackColor);
 }
 .contact-area.bg-white-wrap .contact-info-list li .social li a:hover {
-  color: var(--primaryColor);
+  color: #FFCF4A;
 }
 .contact-area.bg-white-wrap .contact-shape1 {
   top: 2%;
@@ -2594,7 +2594,7 @@ Contact Area CSS
 }
 .contact-area.with-top-border .contact-form-wrap .title span {
   font-weight: 500;
-  color: var(--primaryColor);
+  color: #FFCF4A;
   font-size: 15px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -2693,13 +2693,13 @@ Contact Area CSS
 .contact-info-list li {
   list-style-type: none;
   margin-bottom: 50px;
-  color: #9D9A97;
+  color:#FFCF4A;
 }
 .contact-info-list li:last-child {
   margin-bottom: 0;
 }
 .contact-info-list li span {
-  color: var(--primaryColor);
+  color: #FFCF4A;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1.5px;
@@ -2715,7 +2715,7 @@ Contact Area CSS
   margin-bottom: 0;
 }
 .contact-info-list li a:hover {
-  color: var(--primaryColor);
+  color: #FFCF4A;
 }
 .contact-info-list li .social {
   padding-left: 0;

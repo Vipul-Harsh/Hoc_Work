@@ -119,6 +119,16 @@ const NavbarStyleTwo: React.FC = () => {
                       Architecture Studio
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link
+                      className={`nav-link ${
+                        currentRoute === "/main-home/" ? "active" : ""
+                      }`}
+                      href="/main-home/"
+                    >
+                     Main Home
+                    </Link>
+                  </li>
                 </ul>
               </li>
 
