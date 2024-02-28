@@ -7,28 +7,28 @@ import Image from "next/image";
 const blogPostData = [
   {
     id: "1",
-    image: "/images/blog/blog4.jpg",
+    image: "/images/blog/pile-logs.jpg",
     title: "We Select the Finest Teak",
     date: "Beauty",
     link: "/single-blog/",
   },
   {
     id: "2",
-    image: "/images/blog/blog5.jpg",
+    image: "/images/blog/close-up-engraving-art-tools.jpg",
     title: "Precision in cutting",
     date: "Design",
     link: "/single-blog/",
   },
   {
     id: "3",
-    image: "/images/blog/blog6.jpg",
+    image: "/images/blog/person-wearing-protection-gloves-varnishing-wood.jpg",
     title: "Drying and Seasoning Mastery",
     date: "Perfection",
     link: "/single-blog/",
   },
   {
     id: "4",
-    image: "/images/blog/blog7.jpg",
+    image: "/images/blog/wooden-furniture-kitchen-interior-design.jpg",
     title: "Lifetime Durability",
     date: "Precision",
     link: "/single-blog/",
