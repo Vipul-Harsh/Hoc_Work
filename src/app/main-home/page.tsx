@@ -1,5 +1,5 @@
 import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import HeroBanner from "@/components/ArchitectureStudio/HeroBanner";
+import HeroBanner from "@/components/MainHome/HeroBanner";
 import AboutUsContent from "@/components/MainHome/AboutUsContent";
 import Partner from "@/components/Common/Partner";
 import Banner from "@/components/MainHome/Banner"
@@ -7,9 +7,9 @@ import Projects from "@/components/MainHome/Projects";
 import Reviews from "@/components/MainHome/Reviews"
 import TextSlide from "@/components/Common/TextSlide";
 import TeamMember from "@/components/Common/TeamMember";
-import BlogPost from "@/components/ArchitectureStudio/BlogPost";
+import BlogPost from "@/components/MainHome/Features";
 import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import Footer from "@/components/Layout/Footer";
+import Footer from "@/components/MainHome/Footer";
  
 export default function Page() {
   return (
@@ -22,13 +22,12 @@ export default function Page() {
       <TextSlide/>
       <Projects />
 
-      <div className="pt-100">
+      <div className="pt-90">
+        <BlogPost />
+      </div>
+      <div className="pt-80">
         <Partner />
       </div>
-
-      
-
-      
 
       <div className="section-area-with-line">
         <div className="lines">
@@ -37,6 +36,7 @@ export default function Page() {
           <div className="line"></div>
         </div>
         <Banner/>
+
         <div className="ptb-100">
           <Reviews/>
         </div>
@@ -46,9 +46,7 @@ export default function Page() {
         
       </div>
 
-      <div className="pt-100">
-        <BlogPost />
-      </div>
+      
 
       <div className="pb-100">
         <ContactFormStyleTwo />
