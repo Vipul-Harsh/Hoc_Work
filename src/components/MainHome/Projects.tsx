@@ -2,188 +2,137 @@
 
 import React from "react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
-import rightArrowIcon from "../../../public/images/arrow-right2.svg";
+import arroRightIcon from "../../../public/images/blog/arrow-right.svg";
 
-const projectsData = [
+const blogPostData = [
   {
     id: "1",
-    image: "/images/projects/furniture6.png",
-    title: "Teak Stool",
+    image: "/images/projects/sofa1.png",
+    title:
+      "Comfy Sofa",
     category: "Interior",
-    link: "/portfolio/portfolio-details",
+    categoryLink: "/categories",
+    date: "",
+    link: "/single-blog/",
   },
   {
     id: "2",
-    image: "/images/projects/furniture4.png",
-    title: "Rocking Chair",
-    category: "Sitting",
-    link: "/portfolio/portfolio-details",
+    image: "/images/projects/cafetable.jpg",
+    title:
+      "Teak Decor",
+    category: "Interior",
+    categoryLink: "/categories",
+    date: "",
+    link: "/single-blog/",
   },
   {
     id: "3",
-    image: "/images/projects/furniture2.png",
-    title: "Side Table",
-    category: "Decor",
-    link: "/portfolio/portfolio-details",
+    image: "/images/projects/sofa2.jpg",
+    title:
+      "Cushions",
+    category: "Interior",
+    categoryLink: "/categories",
+    date: "",
+    link: "/single-blog/",
   },
   {
     id: "4",
-    image: "/images/projects/furniture3.png",
-    title: "Single Dining",
+    image: "/images/projects/table.jpg",
+    title:
+      "Side Tables",
     category: "Interior",
-    link: "/portfolio/portfolio-details",
-  },
-  {
-    id: "5",
-    image: "/images/projects/furniture.png",
-    title: "Armchair",
-    category: "Interior",
-    link: "/portfolio/portfolio-details",
-  },
-  {
-    id: "6",
-    image: "/images/projects/furniture7.png",
-    title: "Bedding",
-    category: "Design",
-    link: "/portfolio/portfolio-details",
+    categoryLink: "/categories",
+    date: "",
+    link: "/single-blog/",
   },
 ];
 
-const RecentProjects: React.FC = () => {
+const BlogPost: React.FC = () => {
   return (
     <>
-      <div className="projects-area ptb-100">
+      <div className="blog-area">
         <div className="container">
-          <div className="section-title d-flex justify-content-center">
+          <div className="section-title d-flex justify-content-between align-items-center">
             <h2>
-              Our <span style={{color:"#7D7D7D"}}>Products</span>
+              <span className=" text-black">Recent Collection</span>
             </h2>
+            <Link href="/blog">Visit Product Page</Link>
           </div>
 
-          {projectsData && (
-            <div className="row justify-content-center">
-              <div className="col-lg-4 col-md-6">
-                <div className="projects-inner-border">
-                  {projectsData &&
-                    projectsData.slice(0, 2).map((value, i) => (
-                      <div className="projects-item" key={i}>
-                        <div className="projects-image">
-                          <Link href={value.link}>
-                            <Image
-                              src={value.image}
-                              alt="image"
-                              width={570}
-                              height={720}
-                            />
-                          </Link>
-
-                          <div className="icon">
-                            <Link href={value.link}>
-                              <Image
-                                src={rightArrowIcon}
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                              />
+          {blogPostData && (
+            <div className="blog-inner-slide pb-75">
+              <Swiper
+                spaceBetween={25}
+                loop={false}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: true,
+                  pauseOnMouseEnter: true,
+                }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  992: {
+                    slidesPerView: 2,
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                  },
+                }}
+                modules={[Autoplay, Pagination]}
+                className="blog-slider"
+              >
+                {blogPostData &&
+                  blogPostData.slice(0, 5).map((value, i) => (
+                    <SwiperSlide key={i}>
+                      <div
+                        className="blog-card"
+                        style={{
+                          backgroundImage: `url(${value.image})`,
+                        }}
+                      >
+                        <ul className="meta">
+                          <li>
+                            <Link href={value.categoryLink}>
+                              {value.category}
                             </Link>
-                          </div>
-                        </div>
-                        <div className="projects-content">
+                          </li> 
+                          <li>{value.date}</li>
+                        </ul>
+
+                        <div className="content">
                           <h3>
-                            <Link href={value.link}>{value.title}</Link>
-                            <span className="ms-2">{value.category}</span>
+                            <Link href={value.link}><h1 className=" text-white ">{value.title}</h1></Link>
                           </h3>
+
+                          <Link href={value.link} className="arrow-btn">
+                            <Image src={arroRightIcon} alt="arrow-right" width={24} height={24} />
+                            READ MORE
+                          </Link>
                         </div>
                       </div>
-                    ))}
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="projects-inner-border">
-                  {projectsData &&
-                    projectsData.slice(2, 4).map((value, i) => (
-                      <div className="projects-item" key={i}>
-                        <div className="projects-image">
-                          <Link href={value.link}>
-                            <Image
-                              src={value.image}
-                              alt="image"
-                              width={570}
-                              height={720}
-                            />
-                          </Link>
-
-                          <div className="icon">
-                            <Link href={value.link}>
-                              <Image
-                                src={rightArrowIcon}
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="projects-content">
-                          <h3>
-                            <Link href={value.link}>{value.title}</Link>
-                            <span className="ms-2">{value.category}</span>
-                          </h3>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="projects-inner-border">
-                  {projectsData &&
-                    projectsData.slice(4, 6).map((value, i) => (
-                      <div className="projects-item" key={i}>
-                        <div className="projects-image">
-                          <Link href={value.link}>
-                            <Image
-                              src={value.image}
-                              alt="image"
-                              width={570}
-                              height={720}
-                            />
-                          </Link>
-
-                          <div className="icon">
-                            <Link href={value.link}>
-                              <Image
-                                src={rightArrowIcon}
-                                alt="arrow-right"
-                                width={24}
-                                height={24}
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="projects-content">
-                          <h3>
-                            <Link href={value.link}>{value.title}</Link>
-                            <span className="ms-2">{value.category}</span>
-                          </h3>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
             </div>
           )}
 
-          <div className="projects-btn">
-            <Link href="/portfolio">VIEW ALL PROJECTS</Link>
-          </div>
+          
         </div>
       </div>
     </>
   );
 };
 
-export default RecentProjects;
+export default BlogPost;

@@ -324,6 +324,7 @@ Main Banner Area CSS
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 375px;
+ 
 }
 .main-banner-area .container-fluid {
   padding-left: 30px;
@@ -335,23 +336,25 @@ Main Banner Area CSS
   left: 0;
   right: 0;
   top: 0;
-  height: 100%;
+  height: 70%;
   width: 100%;
-  background: linear-gradient(180deg, rgba(22, 21, 18, 0.9) 0%, rgba(22, 21, 18, 0.3) 100%);
+  
 }
 
 .main-banner-content {
   max-width: 840px;
   position: relative;
+  z-index: 5;
 }
 .main-banner-content h1 {
-  color: #E1DBD6;
+  color: #424242;
   font-size: 70px;
-  margin-bottom: 20px;
+  margin-top: 90px;
+  
 }
 .main-banner-content h1 span {
   color: transparent;
-  -webkit-text-stroke: 0.5px var(--whiteColor);
+  -webkit-text-stroke: 3px black;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -365,21 +368,24 @@ Main Banner Area CSS
 }
 .main-banner-content .banner-btn .default-btn {
   background-color: transparent;
-  border: 1px solid var(--primaryColor);
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
   padding: 15px 40px;
 }
 .main-banner-content .banner-btn .default-btn:hover {
-  background-color: var(--primaryColor);
+  background-color: black;
 }
 
 .main-banner-image {
   position: absolute;
-  right: 80px;
-  bottom: 0;
-  z-index: -1;
+  top: -150px;
+  z-index: 1;
   width: 100%;
   height: 800px;
   background-size: cover;
+
 }
 
 .main-banner-wrap-shape {
@@ -390,7 +396,7 @@ Main Banner Area CSS
 
 .main-banner-video {
   position: absolute;
-  right: 175px;
+  right: 38px;
   top: 175px;
   z-index: 1;
 }
@@ -404,8 +410,8 @@ Main Banner Area CSS
   cursor: pointer;
 }
 .main-banner-video .video-btn i {
-  font-size: 35px;
-  background: linear-gradient(135deg, rgba(216, 183, 152, 0.8) 0%, rgba(186, 141, 109, 0.8) 100%);
+  font-size: 55px;
+  background: rgb(255, 192, 58);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -459,6 +465,7 @@ Main Banner Area CSS
 
 .main-banner-arrow {
   position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
   display: flex;
@@ -467,7 +474,8 @@ Main Banner Area CSS
   display: inline-block;
   height: 80px;
   width: 80px;
-  background-color: var(--primaryColor);
+  z-index: 2;
+  background-color: white;
   text-align: center;
   position: relative;
   transition: var(--transition);
@@ -485,11 +493,16 @@ Main Banner Area CSS
 }
 
 .main-banner-info {
-  padding-left: 0;
+  
   margin-bottom: 0;
   position: absolute;
-  right: 10px;
-  bottom: 155px;
+  top: 70px;
+  right: 8px;
+
+  z-index: 2;
+  color: white;
+  padding: 15px;
+  
   writing-mode: vertical-lr;
 }
 .main-banner-info li {
@@ -1151,9 +1164,7 @@ Services Area CSS
   width: 100%;
 }
 
-.services-wrap-area {
-  background-color: #F2EFEB;
-}
+
 .services-wrap-area .section-title-wrap {
   max-width: 100%;
   padding-left: 0;
@@ -1170,7 +1181,7 @@ Services Area CSS
   padding-left: 45px;
 }
 .services-wrap-area.without-bg-color .services-item {
-  background-color: #F2EFEB;
+  background-color: #e4e4e444;
 }
 .services-wrap-area.without-bg-color .services-item::before {
   background-image: url(/images/services/shape2.png);
@@ -1183,14 +1194,26 @@ Services Area CSS
   position: relative;
   z-index: 1;
   overflow: hidden;
+  animation: slideInUp 0.5s ease-in-out;
 }
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .services-item .icon {
   line-height: 0;
   margin-bottom: 40px;
 }
 .services-item .icon i {
   font-size: 50px;
-  color: var(--primaryColor);
+  color: black;
   line-height: 0;
 }
 .services-item h3 {
@@ -2060,7 +2083,7 @@ Client Area CSS
 }
 
 .client-swiper .swiper-pagination .swiper-pagination-bullet {
-  background-color:#FFBB00;
+  background-color:rgb(82, 82, 82);
   width: 10px;
   height: 10px;
 }
@@ -2277,15 +2300,16 @@ Blog Area CSS
 }
 
 .blog-card {
-  background: #24231F;
+  background-size: cover;
   margin-bottom: 25px;
+  margin: 10px;
   padding: 30px;
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
 .blog-card::before {
-  background: rgba(36, 35, 31, 0.8);
+
   position: absolute;
   content: "";
   left: 0;
@@ -2323,7 +2347,7 @@ Blog Area CSS
   position: relative;
 }
 .blog-card .meta li::before {
-  content: "-";
+  content: "";
   position: absolute;
   right: -10px;
   top: 0;

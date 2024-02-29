@@ -44,7 +44,7 @@ const AboutUsContent: React.FC = () => {
                 data-aos-once="true"
               >
                 <div className="title">
-                  <h2 style={{ color: "#A7A2A2" }}>
+                  <h2 style={{ color: "grey" }}>
                     Welcome to{" "}
                     <span style={{ color: "black" }}>HOC Furniture</span> <br />
                     Where Every Piece Tells a Story
@@ -71,7 +71,7 @@ const AboutUsContent: React.FC = () => {
                       data-aos-duration="600"
                       data-aos-once="true"
                     >
-                      <span style={{ color: "#FFB950" }}>ABOUT US</span>
+                      <span style={{ color: "black" }}>ABOUT US</span>
                       <h2></h2>
                       <p>
                         At HOC Premium Furniture, we specialize in crafting
@@ -96,6 +96,7 @@ const AboutUsContent: React.FC = () => {
                             alt="arrow"
                             width={28}
                             height={10}
+                            color="black"
                           />
                           Exceptional Craftsmanship by Highly Skilled Artisans
                         </li>
@@ -121,7 +122,7 @@ const AboutUsContent: React.FC = () => {
                       </ul>
 
                       <div className="about-btn">
-                        <Link href="/about-us"  style={{background:"#FFB950",color:"white",padding:"15px"}}>
+                        <Link href="/about-us"  style={{background:"black",color:"white",padding:"15px"}}>
                           Know More About Us
                         </Link>
                       </div>

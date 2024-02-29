@@ -19,7 +19,7 @@ const clientsFeedbackData = [
   {
     id: "2",
     feedbackText:
-      "I couldn't be happier with my experience at HOC Premium Furniture. I purchased a beautiful teak wood bed frame, and it exceeded my expectations in every way. The attention to detail and quality of construction are evident. It's a stunning addition to my bedroom!",
+      "I couldn't be happier with my experience at HOC Premium Furniture. I purchased a beautiful teak wood bed frame, and it exceeded my expectations in every way. The attention to detail and quality of construction are evident. It's a stunning bedroom!",
     image: "/images/client/user2.png",
     name: "Angela Carter",
     designation: "CEO of EnvyTheme",
@@ -35,7 +35,7 @@ const clientsFeedbackData = [
   {
     id: "4",
     feedbackText:
-      "I'm absolutely thrilled with my purchase from HOC Premium Furniture. The teak wood coffee table I bought is a true work of art. It's not only beautiful but also incredibly sturdy. The delivery was prompt, and the entire buying process was seamless. I'll definitely be a repeat customer!",
+      "I'm absolutely thrilled with my purchase from HOC Premium Furniture. The teak wood coffee table I bought is a true work of art. It's not only beautiful but also incredibly sturdy. The delivery was prompt, and the entire buying process was seamless. ",
     image: "/images/client/user4.png",
     name: "Angela Carter",
     designation: "CEO of Abc",
@@ -48,7 +48,7 @@ const ClientsFeedbackSlider: React.FC = () => {
       <div className="client-wrap-area pb-75">
         <div className="container">
           <div className="section-title-wrap">
-            <span style={{color:"#FFDB51"}}>REVIEWS</span>
+            <span style={{color:"black"}}>REVIEWS</span>
             <h2>Our Clients Talk About Us & Believe In Our Work</h2>
           </div>
         </div>
@@ -111,7 +111,7 @@ const ClientsFeedbackSlider: React.FC = () => {
                         </div>
                         <div className="title">
                           <h3>{value.name}</h3>
-                          <span style={{color:"#FFBB00"}}>{value.designation}</span>
+                          <span style={{color:"black"}}>{value.designation}</span>
                         </div>
                       </div>
                     </div>

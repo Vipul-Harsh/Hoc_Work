@@ -4,74 +4,69 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const blogPostData = [
+import arrowRightIcon from "../../../public/images/arrow-right.svg";
+
+const servicesData = [
   {
     id: "1",
-    image: "/images/blog/pile-logs.jpg",
-    title: "We Select the Finest Teak",
-    date: "Beauty",
-    link: "/single-blog/",
+    icon: "flaticon-measuring",
+    title: "Precision",
+    shortText:
+      "We are a premier woodworking studio committed to crafting precision-cut designs that exceed expectations and redefine craftsmanship.",
+    link: "/services/service-details",
   },
   {
     id: "2",
-    image: "/images/blog/close-up-engraving-art-tools.jpg",
-    title: "Precision in cutting",
-    date: "Design",
-    link: "/single-blog/",
+    icon: "flaticon-interior-design",
+    title: "Creative Design",
+    shortText:
+      "We are a pioneering design studio devoted to crafting innovative designs that surpass conventional expectations, pushing the boundaries of creativity.",
+    link: "/services/service-details",
   },
   {
     id: "3",
-    image: "/images/blog/person-wearing-protection-gloves-varnishing-wood.jpg",
-    title: "Drying and Seasoning Mastery",
-    date: "Perfection",
-    link: "/single-blog/",
-  },
-  {
-    id: "4",
-    image: "/images/blog/wooden-furniture-kitchen-interior-design.jpg",
-    title: "Lifetime Durability",
-    date: "Precision",
-    link: "/single-blog/",
+    icon: "flaticon-mansory",
+    title: "High Quality Wood ",
+    shortText:
+      "We are a premier woodworking establishment committed to producing high-quality woodwork designs that surpass expectations and elevate standards. ",
+    link: "/services/service-details",
   },
 ];
 
-const BlogPost: React.FC = () => {
+const Services: React.FC = () => {
   return (
     <>
-      <div className="blog-area pb-75">
+      <div className="services-wrap-area pt-100 pb-75">
         <div className="container">
           <div className="section-title-wrap d-flex justify-content-between align-items-end">
             <div className="title">
-              <span style={{color:"#ffd54d"}}>FEATURES</span>
-              <h2>These features help us to gain 100% satisfaction</h2>
+              <span className=" text-black">FEATURES</span>
+              <h2>
+                We Provide these <b>Features </b>Which Help us to achive 100% Satisfaction.
+              </h2>
             </div>
-            <div className="link-btn">
-              <Link href="/blog" style={{color:"#ffd54d"}}>Lets See How</Link>
-            </div>
+            {/* <div className="link-btn">
+              <Link href="/services">VIEW ALL SERVICES</Link>
+            </div> */}
           </div>
 
-          {blogPostData && (
+          {servicesData && (
             <div className="row justify-content-center">
-              {blogPostData &&
-                blogPostData.slice(0, 4).map((value, i) => (
-                  <div className="col-lg-6 col-md-12" key={i}>
-                    <div className="blog-item">
-                      <div className="image">
-                        <Link href={value.link}>
-                          <Image
-                            src={value.image}
-                            alt="image"
-                            width={1230}
-                            height={560}
-                          />
-                        </Link>
+              {servicesData &&
+                servicesData.slice(0, 3).map((value, i) => (
+                  <div className="col-lg-4 col-md-6" key={i}>
+                    <div className="services-item">
+                      <div className="icon">
+                        <i className={value.icon}></i>
                       </div>
-                      <div className="content wrap-color">
-                        <span className="date">{value.date}</span>
-                        <h3>
-                          <a href={value.link}>{value.title}</a>
-                        </h3>
-                      </div>
+                      <h3>
+                        <Link href={value.link}>{value.title}</Link>
+                      </h3>
+                      <p>{value.shortText}</p>
+
+                      <Link href={value.link} className="services-btn">
+                        <Image src={arrowRightIcon} alt="arrow-right" width={18} height={18} />
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -83,4 +78,4 @@ const BlogPost: React.FC = () => {
   );
 };
 
-export default BlogPost;
+export default Services;

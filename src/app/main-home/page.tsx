@@ -1,33 +1,33 @@
 import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import HeroBanner from "@/components/MainHome/HeroBanner";
+import HeroBanner2 from "@/components/MainHome/HeroBanner2";
 import AboutUsContent from "@/components/MainHome/AboutUsContent";
 import Partner from "@/components/Common/Partner";
-import Banner from "@/components/MainHome/Banner"
+import Banner from "@/components/MainHome/Banner";
 import Projects from "@/components/MainHome/Projects";
-import Reviews from "@/components/MainHome/Reviews"
+import Products from "@/components/MainHome/Products";
+import Reviews from "@/components/MainHome/Reviews";
 import TextSlide from "@/components/Common/TextSlide";
 import TeamMember from "@/components/Common/TeamMember";
 import BlogPost from "@/components/MainHome/Features";
+import Features from "@/components/MainHome/Features";
 import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
 import Footer from "@/components/MainHome/Footer";
- 
+
 export default function Page() {
   return (
     <>
       <NavbarStyleTwo />
 
-      <HeroBanner />
+      <HeroBanner2 />
+      <div className=" position-relative ">
+        <Projects />
+      </div>
 
       <AboutUsContent />
-      <TextSlide/>
-      <Projects />
 
-      <div className="pt-90">
-        <BlogPost />
-      </div>
-      <div className="pt-80">
+      {/* <div className="pt-80">
         <Partner />
-      </div>
+      </div> */}
 
       <div className="section-area-with-line">
         <div className="lines">
@@ -35,24 +35,16 @@ export default function Page() {
           <div className="line"></div>
           <div className="line"></div>
         </div>
-        <Banner/>
 
+        <Products />
+        <Features />
+        <Partner/>
         <div className="ptb-100">
-          <Reviews/>
+          <Reviews />
         </div>
-
-        
-
-        
       </div>
 
-      
-
-      <div className="pb-100">
-        <ContactFormStyleTwo />
-      </div>
- 
       <Footer />
     </>
-  )
+  );
 }

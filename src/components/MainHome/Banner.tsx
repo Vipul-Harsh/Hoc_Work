@@ -25,7 +25,7 @@ const HeroBanner: React.FC = () => {
         >
           <SwiperSlide>
             <div className="main-slider-item text-center">
-              <Image src={bannerBgImg} alt="banner" width={1920} height={540} />
+              <Image src={bannerBgImg} alt="banner" width={1000} height={50} />
             </div>
           </SwiperSlide>
 
@@ -34,15 +34,15 @@ const HeroBanner: React.FC = () => {
               <Image
                 src={bannerBgImg2}
                 alt="banner"
-                width={1920}
-                height={540}
+                width={1000}
+                height={50}
               />
             </div>
           </SwiperSlide>
         </Swiper>
 
         <div className="main-banner-animation">
-          <Image src={interiorImg} alt="interior" width={4520} height={540} />
+          <Image src={interiorImg} alt="interior" width={1000} height={100} style={{backgroundSize:"cover"}} />
         </div>
       </div>
     </>
