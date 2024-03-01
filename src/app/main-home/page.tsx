@@ -37,6 +37,7 @@ export default function Page() {
         </div>
 
         <Products />
+        <Banner/>
         <Features />
         <Partner/>
         <div className="ptb-100">
