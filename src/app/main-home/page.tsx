@@ -1,51 +1,27 @@
-import NavbarStyleTwo from "@/components/Layout/NavbarStyleTwo";
-import HeroBanner2 from "@/components/MainHome/HeroBanner2";
-import AboutUsContent from "@/components/MainHome/AboutUsContent";
-import Partner from "@/components/Common/Partner";
-import Banner from "@/components/MainHome/Banner";
-import Projects from "@/components/MainHome/Projects";
-import Products from "@/components/MainHome/Products";
-import Reviews from "@/components/MainHome/Reviews";
-import TextSlide from "@/components/Common/TextSlide";
-import TeamMember from "@/components/Common/TeamMember";
-import BlogPost from "@/components/MainHome/Features";
-import Features from "@/components/MainHome/Features";
-import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
-import Footer from "@/components/MainHome/Footer";
-
+import React from "react";
+import Navbar from "../../components/MainHome/NavBar"
+import HeroBanner from "../../components/MainHome/HeroBanner"
+import About from "../../components/MainHome/AboutUs"
+import Services from "../../components/MainHome/services/ServiceTab"
+import HeroBanner2 from "../../components/MainHome/HeroSection2"
+import Projects from "../../components/MainHome/Projects"
+import Process from "../../components/MainHome/Process"
+import Testimonials from "../../components/MainHome/Testimonials"
+import Blogs from "../../components/MainHome/Blogs&News"
+import Footer from "../../components/MainHome/Footer"
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
-
-      <HeroBanner2 />
-      <div className=" position-relative ">
-        <Projects />
-      </div>
-
-      <AboutUsContent />
-
-      {/* <div className="pt-80">
-        <Partner />
-      </div> */}
-
-      <div className="section-area-with-line">
-        <div className="lines">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
-
-        <Products />
-        <Banner/>
-        <Features />
-        <Partner/>
-        <div className="ptb-100">
-          <Reviews />
-        </div>
-      </div>
-
-      <Footer />
+      <Navbar/>
+      <HeroBanner/>
+      <About/>
+      <Services/>
+      <HeroBanner2/>
+      <Projects/>
+      <Process/>
+      <Testimonials/>
+      <Blogs/>
+      <Footer/>
     </>
   );
 }

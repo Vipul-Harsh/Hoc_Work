@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import whiteLogo from "../../../public/images/white-logo.svg";
-import NewsletterForm from "../Layout/NewsletterForm";
+import NewsletterForm from "./NewsletterForm";
 
 // Social Links
 const socialLinksData = [

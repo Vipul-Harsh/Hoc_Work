@@ -1,106 +1,37 @@
+"use client";
 
 import React from "react";
+import Link from "next/link";
+import ReactCompareImage from "react-compare-image";
 
-
-const HeroBanner = () => {
-    
-  
-    
+const HeroBanner: React.FC = () => {
   return (
-    <div className=" containers">
-      <div className="slide">
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img1.jpg')" ,backgroundSize:"cover"}}
-        >
-          <div className="contents">
-            <div className="name">Sample 1</div>
-            <div className="des">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              aut neque omnis pariatur quidem inventore quae et molestias
-              impedit non nostrum aperiam officiis quaerat nemo, suscipit vero
-              ex sequi esse!
-            </div>
-            <button>See More</button>
+    <>
+      <div className="as-banner-area" >
+        <div className="container-fluid">
+          <div className="as-banner-image">
+            <ReactCompareImage 
+              leftImage="/images/main-banner/as-banner-after.jpg"
+              rightImage="/images/main-banner/as-banner-before.jpg"
+            />
           </div>
-        </div>
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img2.jpg')",backgroundSize:"cover" }}
-        >
-          <div className="contents">
-            <div className="name">Elevate Your Living Space with Timeless Elegance</div>
-            <div className="des">
-             
-            </div>
-            <button>See More</button>
+
+          <div 
+            className="as-banner-content"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+            data-aos-once="false"
+          >
+            <h1>
+            Elevate Your Space with  <b>HOC Furniture</b> Design Magic
+            </h1>
           </div>
-        </div>
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img3.jpg')",backgroundSize:"cover" }}
-        >
-          <div className="contents">
-            <div className="name">Sample 3</div>
-            <div className="des">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              aut neque omnis pariatur quidem inventore quae et molestias
-              impedit non nostrum aperiam officiis quaerat nemo, suscipit vero
-              ex sequi esse!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img3.jpg')",backgroundSize:"cover" }}
-        >
-          <div className="contents">
-            <div className="name">Sample 3</div>
-            <div className="des">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              aut neque omnis pariatur quidem inventore quae et molestias
-              impedit non nostrum aperiam officiis quaerat nemo, suscipit vero
-              ex sequi esse!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img3.jpg')",backgroundSize:"cover" }}
-        >
-          <div className="contents">
-            <div className="name">Sample 3</div>
-            <div className="des">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              aut neque omnis pariatur quidem inventore quae et molestias
-              impedit non nostrum aperiam officiis quaerat nemo, suscipit vero
-              ex sequi esse!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="items"
-          style={{ background: "url('/images/main-banner/Banner-img3.jpg')" ,backgroundSize:"cover"}}
-        >
-          <div className="contents">
-            <div className="name">Sample 3</div>
-            <div className="des">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              aut neque omnis pariatur quidem inventore quae et molestias
-              impedit non nostrum aperiam officiis quaerat nemo, suscipit vero
-              ex sequi esse!
-            </div>
-            <button>See More</button>
-          </div>
+
+         
         </div>
       </div>
-      
-      
-    </div>
-    
+    </>
   );
 };
 

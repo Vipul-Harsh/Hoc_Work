@@ -11,7 +11,7 @@ const clientsFeedbackData = [
   {
     id: "1",
     feedbackText:
-      "I recently purchased a dining set from HOC Premium Furniture, and I must say, I'm impressed! The craftsmanship is top-notch, and the teak wood finish adds an elegant touch to my dining room. The customer service was exceptional too. Highly recommended!",
+      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations with our team is a great high in demand.",
     image: "/images/client/user1.png",
     name: "Jonathon Ronan",
     designation: "CEO of HiBootstrap",
@@ -19,7 +19,7 @@ const clientsFeedbackData = [
   {
     id: "2",
     feedbackText:
-      "I couldn't be happier with my experience at HOC Premium Furniture. I purchased a beautiful teak wood bed frame, and it exceeded my expectations in every way. The attention to detail and quality of construction are evident. It's a stunning bedroom!",
+      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations with our team is a great high in demand.",
     image: "/images/client/user2.png",
     name: "Angela Carter",
     designation: "CEO of EnvyTheme",
@@ -27,7 +27,7 @@ const clientsFeedbackData = [
   {
     id: "3",
     feedbackText:
-      "HOC Premium Furniture sets the bar high for luxury living. I recently furnished my living room with their teak wood sofa set, and it's nothing short of magnificent. The comfort, style, and durability are unmatched. Thank you, HOC, for elevating my home!",
+      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations with our team is a great high in demand.",
     image: "/images/client/user3.png",
     name: "Skyler White",
     designation: "CEO of HiboTheme",
@@ -35,7 +35,7 @@ const clientsFeedbackData = [
   {
     id: "4",
     feedbackText:
-      "I'm absolutely thrilled with my purchase from HOC Premium Furniture. The teak wood coffee table I bought is a true work of art. It's not only beautiful but also incredibly sturdy. The delivery was prompt, and the entire buying process was seamless. ",
+      "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations with our team is a great high in demand.",
     image: "/images/client/user4.png",
     name: "Angela Carter",
     designation: "CEO of Abc",
@@ -48,7 +48,7 @@ const ClientsFeedbackSlider: React.FC = () => {
       <div className="client-wrap-area pb-75">
         <div className="container">
           <div className="section-title-wrap">
-            <span style={{color:"black"}}>REVIEWS</span>
+            <span>REVIEWS</span>
             <h2>Our Clients Talk About Us & Believe In Our Work</h2>
           </div>
         </div>
@@ -87,15 +87,10 @@ const ClientsFeedbackSlider: React.FC = () => {
             >
               {clientsFeedbackData &&
                 clientsFeedbackData.map((value, i) => (
-                  <SwiperSlide key={i} style={{ paddingBottom: "30px" }}>
+                  <SwiperSlide key={i} style={{ paddingBottom: '30px' }}>
                     <div className="client-wrap-card">
                       <div className="icon">
-                        <Image
-                          src={quoteIcon}
-                          alt="quote"
-                          width={56}
-                          height={56}
-                        />
+                        <Image src={quoteIcon} alt="quote" width={56} height={56} />
                       </div>
 
                       <p>{value.feedbackText}</p>
@@ -111,7 +106,7 @@ const ClientsFeedbackSlider: React.FC = () => {
                         </div>
                         <div className="title">
                           <h3>{value.name}</h3>
-                          <span style={{color:"black"}}>{value.designation}</span>
+                          <span>{value.designation}</span>
                         </div>
                       </div>
                     </div>
