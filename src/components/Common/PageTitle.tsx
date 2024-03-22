@@ -15,7 +15,7 @@ const PageTitle: React.FC<PageBannerTitleProps> = ({
   homeUrl,
 }) => {
   return (
-    <div className="page-banner-area">
+    <div className="page-banner-area" style={{background:"white"}}>
       <div className="container-fluid">
         <div className="page-banner-inner">
           <ul className="list text-uppercase">

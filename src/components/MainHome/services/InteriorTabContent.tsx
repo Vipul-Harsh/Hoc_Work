@@ -24,8 +24,8 @@ const InteriorTabContent: React.FC = () => {
             codes of the Arcachon basin. We design houses that are integrated
             into their environment. We imagine for you a haven of peace.
           </p>
-          <Link href="/services">
-            VIEW ALL INTERIOR SERVICES
+          <Link href="/portfolio-2/">
+            VIEW ALL PRODUCTS
           </Link>
         </div>
       </div>

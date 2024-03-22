@@ -43,7 +43,7 @@ const ProjectCardStyle2: React.FC = () => {
         <div className="container">
           <div className="section-title-wrap">
             <span>PROJECTS</span>
-            <h2>Selected Projects That We Really Want To Show You</h2>
+            <h2 style={{color:"black"}}>Selected Projects That We Really Want To Show You</h2>
           </div>
 
           <div

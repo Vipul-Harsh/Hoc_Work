@@ -578,6 +578,7 @@ Architecture Studio Banner Area CSS
 .as-banner-area .container-fluid {
   padding-left: 0;
   padding-right: 0;
+  max-width: 1360px;
 }
 
 .as-banner-image .icv__control-line {
@@ -2442,18 +2443,30 @@ Blog Area CSS
   display: block;
 }
 .blog-item .content {
-  background-color: var(--blackColor);
+  background-color: #f4f4f4;
   padding: 25px 25px 25px 60px;
   max-width: 345px;
   position: absolute;
   left: 0;
   bottom: 20px;
+  
   transition: var(--transition);
 }
+/* .blog-item .content:hover{
+  background-color: black;
+  padding: 25px 25px 25px 60px;
+  max-width: 345px;
+  position: absolute;
+  left: 0;
+  color: white;
+  bottom: 20px;
+  transition: var(--transition);
+} */
+
 .blog-item .content .date {
   font-size: 14px;
   font-weight: 500;
-  color: rgb(165, 165, 165);
+  color:#ba8d6d;
   writing-mode: vertical-lr;
   position: absolute;
   top: 25px;
@@ -2466,13 +2479,13 @@ Blog Area CSS
   line-height: 1.5;
 }
 .blog-item .content h3 a {
-  color: var(--whiteColor);
+  color: black;
 }
 .blog-item .content h3 a:hover {
   color: white;
 }
 .blog-item .content.wrap-color {
-  background: #fcc83a;
+  background: #f4f4f4;
   transition: var(--transition);
 }
 .blog-item .content.wrap-color h3 a {
@@ -2483,10 +2496,10 @@ Blog Area CSS
   bottom: 25px;
 }
 .blog-item:hover .content.wrap-color {
-  background: var(--blackColor);
+  background: black;
 }
 .blog-item:hover .content.wrap-color h3 a {
-  color: var(--whiteColor);
+  color: white;
 }
 
 .blog-search-box {
@@ -2558,7 +2571,7 @@ Contact Area CSS
 }
 .contact-area.bg-white-wrap .contact-form-wrap .title span {
   font-weight: 500;
-  color: #FFCF4A;
+  color: #ba8d6d;
   font-size: 15px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -2597,13 +2610,13 @@ Contact Area CSS
   color: #6C6661;
 }
 .contact-area.bg-white-wrap .contact-info-list li a:hover {
-  color: #FFCF4A;
+  color: #ba8d6d;
 }
 .contact-area.bg-white-wrap .contact-info-list li .social li a {
   color: var(--blackColor);
 }
 .contact-area.bg-white-wrap .contact-info-list li .social li a:hover {
-  color: #FFCF4A;
+  color: #ba8d6d;
 }
 .contact-area.bg-white-wrap .contact-shape1 {
   top: 2%;
@@ -2618,7 +2631,7 @@ Contact Area CSS
 }
 .contact-area.with-top-border .contact-form-wrap .title span {
   font-weight: 500;
-  color: #FFCF4A;
+  color: #ba8d6d;
   font-size: 15px;
   writing-mode: vertical-lr;
   position: absolute;
@@ -2717,13 +2730,13 @@ Contact Area CSS
 .contact-info-list li {
   list-style-type: none;
   margin-bottom: 50px;
-  color:#FFCF4A;
+  color:#ba8d6d;
 }
 .contact-info-list li:last-child {
   margin-bottom: 0;
 }
 .contact-info-list li span {
-  color: #FFCF4A;
+  color: #ba8d6d;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1.5px;
@@ -2739,7 +2752,7 @@ Contact Area CSS
   margin-bottom: 0;
 }
 .contact-info-list li a:hover {
-  color: #FFCF4A;
+  color: #ba8d6d;
 }
 .contact-info-list li .social {
   padding-left: 0;
@@ -3760,13 +3773,13 @@ Pagination Area CSS
   background-color: var(--blackColor);
 }
 .full-bg-black-color .page-banner-inner {
-  background: #423E3A;
+  background: white;
 }
 .full-bg-black-color .page-banner-inner .list li {
-  color: #A8A39F;
+  color: black;
 }
 .full-bg-black-color .page-banner-inner .list li a {
-  color: var(--whiteColor) !important;
+  color: grey !important;
 }
 .full-bg-black-color .page-banner-inner .list li a:hover {
   color: var(--primaryColor) !important;

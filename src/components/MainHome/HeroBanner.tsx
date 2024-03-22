@@ -8,7 +8,7 @@ const HeroBanner: React.FC = () => {
   return (
     <>
       <div className="as-banner-area" >
-        <div className="container-fluid">
+        <div className="container-fluid" style={{maxWidth:"1340px"}}>
           <div className="as-banner-image">
             <ReactCompareImage 
               leftImage="/images/main-banner/as-banner-after.jpg"

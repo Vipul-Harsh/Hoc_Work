@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <div className="projects-area bg-wrap-with-black ptb-100" style={{background:"white"}}>
-        <h1 style={{textAlign:"left",marginLeft:"10%",paddingBottom:"5%",fontWeight:"400"}}>Our Projects</h1>
+        {/* <h1 style={{textAlign:"left",marginLeft:"10%",paddingBottom:"5%",fontWeight:"400"}}>Our Projects</h1> */}
         <div className="container">
           {projectsData && (
             <div className="row justify-content-center">
@@ -73,9 +73,9 @@ const Projects: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-md-6">
-                <div className="section-title-wrap">
+                <div className="section-title-wrap" >
                   <span>PROJECTS</span>
-                  <h2>Selected Projects That We Really Want To Show You</h2>
+                  <h2 style={{color:"black"}}>Selected Projects That We Really Want To Show You</h2>
                 </div>
 
                 <div className="projects-inner-border">
@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
           )}
 
           <div className="projects-btn">
-            <Link href="/portfolio">VIEW ALL PROJECTS</Link>
+            <Link href="/portfolio-2" style={{fontSize:"24px"}}>VIEW ALL PROJECTS</Link>
           </div>
         </div>
       </div>

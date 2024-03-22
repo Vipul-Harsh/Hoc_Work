@@ -12,7 +12,7 @@ import arrowIcon from "../../../public/images/about/arrow.svg";
 const AboutUsContent: React.FC = () => {
   return (
     <>
-      <div className="about-area ptb-100">
+      <div className="about-area ptb-100" style={{background:"#24231D"}}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-12">

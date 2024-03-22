@@ -11,8 +11,8 @@ const HeroBanner: React.FC = () => {
         <div className="container-fluid">
           <div className="as-banner-image">
             <ReactCompareImage 
-              leftImage="/images/main-banner/Untitled design.png"
-              rightImage="/images/main-banner/plant-empty-room-with-gray-wall-mockup.jpg"
+              leftImage="/images/main-banner/as-banner-after.jpg"
+              rightImage="/images/main-banner/as-banner-before.jpg"
             />
           </div>
 

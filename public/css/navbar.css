@@ -68,7 +68,7 @@ Navbar Area CSS
 }
 .navbar .navbar-nav .nav-item .nav-link {
   position: relative;
-  color: var(--whiteColor);
+  color: #ba8d6d;
   transition: var(--transition);
   font-size: 16px;
   font-weight: 400;

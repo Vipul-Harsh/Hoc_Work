@@ -46,7 +46,7 @@ const BlogPost: React.FC = () => {
               <h2>Read Our Latest Blog To Stay Updated Always</h2>
             </div>
             <div className="link-btn">
-              <Link href="/blog">VISIT BLOG PAGE</Link>
+              <Link href="/blog" style={{fontSize:"20px"}}>Read More</Link>
             </div>
           </div>
 

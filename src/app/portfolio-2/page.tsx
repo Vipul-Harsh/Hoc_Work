@@ -7,10 +7,11 @@ import Footer from "@/components/Layout/Footer";
 export default function Page() {
   return (
     <>
-      <div className="full-bg-black-color">
+      <div className="full-bg-black-color" style={{background:"white"}}>
         <Navbar />
        
-        <PageTitle 
+        <PageTitle
+         
           title="Portfolio Style 2"
           homeText="Home"
           homeUrl="/"

@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-import logo from "/public/images/white-logo.svg";
+import logo from "/public/images/main-banner/HOC New Year 2024.png";
 import blackLogo from "/public/images/black-logo.svg";
 
 const Navbar: React.FC = () => {
@@ -149,17 +149,17 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link dropdown-toggle"
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   style={{color:"#ba8d6d"}}
                 >
-                  Portfolio
+                  Our Products
                 </Link>
 
-                <ul className="dropdown-menu">
+                {/* <ul className="dropdown-menu">
                   <li className="nav-item">
                     <Link
                       href="/portfolio/"
@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
                       }`}
                       style={{color:"#ba8d6d"}}
                     >
-                      Portfolio Style 01
+                     Gallery
                     </Link>
                   </li>
 
@@ -180,7 +180,7 @@ const Navbar: React.FC = () => {
                       }`}
                       style={{color:"#ba8d6d"}}
                     >
-                      Portfolio Style 02
+                      Blogs
                     </Link>
                   </li>
 
@@ -197,10 +197,33 @@ const Navbar: React.FC = () => {
                       Portfolio Details
                     </Link>
                   </li>
-                </ul>
+                </ul> 
+              </li> */}
+              <li className="nav-item">
+                <Link
+                  href="/about-us/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{color:"#ba8d6d"}}
+                >
+                  Our Products
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  href="/gallery/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{color:"#ba8d6d"}}
+                >
+                  Gallery
+                </Link>
               </li>
 
-              <li className="nav-item">
+
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -383,19 +406,29 @@ const Navbar: React.FC = () => {
                     </Link>
                   </li>
                 </ul>
+              </li> */}
+<li className="nav-item">
+                <Link
+                  href="/blog/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{color:"#ba8d6d"}}
+                >
+                  Blog
+                </Link>
               </li>
-
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/blog/"
                   onClick={(e) => e.preventDefault()}
                   style={{color:"#ba8d6d"}}
                 >
                   Blog
                 </Link>
 
-                <ul className="dropdown-menu">
+                {/* <ul className="dropdown-menu">
                   <li className="nav-item">
                     <Link
                       href="/blog/"
@@ -492,10 +525,10 @@ const Navbar: React.FC = () => {
                       </li>
                     </ul>
                   </li>
-                </ul>
-              </li>
+                </ul> 
+              </li> */}
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   href="/contact-us/"
                   className={`nav-link ${
@@ -505,7 +538,7 @@ const Navbar: React.FC = () => {
                 >
                   Contact Us
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
