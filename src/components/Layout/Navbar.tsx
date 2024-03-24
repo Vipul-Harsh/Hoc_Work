@@ -14,6 +14,7 @@ import Image from "next/image";
 
 import logo from "/public/images/main-banner/HOC New Year 2024.png";
 import darklogo from "/public/images/main-banner/HOCresize.png"
+import Logo2 from "/public/images/main-banner/4.2.png"
 
 const Navbar: React.FC = () => {
   const currentRoute = usePathname();
@@ -40,7 +41,7 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const logoImage = isScrolled ? logo:darklogo  ;
+  const logoImage = isScrolled ? logo:Logo2  ;
 
   useEffect(() => {
     let elementId = document.getElementById("navbar");

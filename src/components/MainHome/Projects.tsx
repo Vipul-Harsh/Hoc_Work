@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
-
+import close from "/public/images/client/close.svg"
 const projectsData = [
   // ... (same data)
   {
@@ -163,7 +163,7 @@ const Projects: React.FC = () => {
                           onClick={() => openModal(value)}
                           style={{border:"none"}}
                         >
-                          SEE CASE STUDIES
+                          SEE MORE
                         </button>
                       </div>
                       <div className="projects-content">
@@ -201,7 +201,7 @@ const Projects: React.FC = () => {
                           onClick={() => openModal(value)}
                           style={{border:"none"}}
                         >
-                          SEE CASE STUDIES
+                          SEE MORE
                         </button>
                       </div>
                       <div className="projects-content">
@@ -233,7 +233,7 @@ const Projects: React.FC = () => {
           >
             <div className="headingtext">
               <button className="close-btn" onClick={closeModal}>
-                Close
+              <Image src={close} width={30} height={30}/>
               </button>
               <h2>{selectedProject?.title}</h2>
             </div>

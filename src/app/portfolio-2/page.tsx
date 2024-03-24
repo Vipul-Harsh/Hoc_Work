@@ -12,7 +12,7 @@ export default function Page() {
        
         <PageTitle
          
-          title="Portfolio Style 2"
+          title="Our Products"
           homeText="Home"
           homeUrl="/"
         />
