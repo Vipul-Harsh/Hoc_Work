@@ -13,12 +13,34 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 import logo from "/public/images/main-banner/HOC New Year 2024.png";
-import blackLogo from "/public/images/black-logo.svg";
+import darklogo from "/public/images/main-banner/HOCresize.png"
 
 const Navbar: React.FC = () => {
   const currentRoute = usePathname();
 
   const [menu] = useState<boolean>(true);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [navbarTextColor, setNavbarTextColor] = useState<string>("#ba8d6d");
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+        setNavbarTextColor("#FEDB8B");
+      } else {
+        setIsScrolled(false);
+        setNavbarTextColor("#ba8d6d");
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const logoImage = isScrolled ? logo:darklogo  ;
 
   useEffect(() => {
     let elementId = document.getElementById("navbar");
@@ -55,7 +77,7 @@ const Navbar: React.FC = () => {
       <nav className="navbar navbar-expand-lg" id="navbar" style={{color:"#ba8d6d"}}>
         <div className="container-fluid position-relative">
           <Link className="navbar-brand" href="/">
-            <Image src={logo} alt="Traz Logo" width={113} height={54} />
+            <Image src={logoImage} alt="Traz Logo" width={113} height={54} />
           </Link>
 
           {/* Toggle navigation */}
@@ -77,7 +99,7 @@ const Navbar: React.FC = () => {
           {/* Menu For Desktop Device */}
           <div className={classOne} id="navbarSupportedContent" >
             <ul className="navbar-nav ms-auto" >
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -135,15 +157,25 @@ const Navbar: React.FC = () => {
                     </Link>
                   </li>
                 </ul>
+              </li> */}
+<li className="nav-item">
+                <Link
+                  href="/main-home/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{ color: navbarTextColor }} 
+                >
+                 Home
+                </Link>
               </li>
-
               <li className="nav-item">
                 <Link
                   href="/about-us/"
                   className={`nav-link ${
                     currentRoute === "/about-us/" ? "active" : ""
                   }`}
-                  style={{color:"#ba8d6d"}}
+                  style={{ color: navbarTextColor }} 
                 >
                   About Us
                 </Link>
@@ -203,9 +235,9 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/about-us/"
                   className={`nav-link ${
-                    currentRoute === "/about-us/" ? "active" : ""
+                    currentRoute === "/portfolio-2" ? "active" : ""
                   }`}
-                  style={{color:"#ba8d6d"}}
+                  style={{ color: navbarTextColor }} 
                 >
                   Our Products
                 </Link>
@@ -216,204 +248,21 @@ const Navbar: React.FC = () => {
                   className={`nav-link ${
                     currentRoute === "/about-us/" ? "active" : ""
                   }`}
-                  style={{color:"#ba8d6d"}}
+                  style={{ color: navbarTextColor }} 
                 >
                   Gallery
                 </Link>
               </li>
 
 
-              {/* <li className="nav-item">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  style={{color:"#ba8d6d"}}
-                >
-                  Pages
-                </Link>
-
-                <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Services
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/services/"
-                          className={`nav-link ${
-                            currentRoute === "/services/" ? "active" : ""
-                          }`}
-                          style={{color:"#ba8d6d"}}
-                        >
-                          Services
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/services/service-details/"
-                          className={`nav-link ${
-                            currentRoute === "/services/service-details/"
-                              ? "active"
-                              : ""
-                          }`}
-                          style={{color:"#ba8d6d"}}
-                        >
-                          Services Details
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/pricing/"
-                      className={`nav-link ${
-                        currentRoute === "/pricing/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Pricing
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/team/"
-                      className={`nav-link ${
-                        currentRoute === "/team/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Team
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/gallery/"
-                      className={`nav-link ${
-                        currentRoute === "/gallery/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Gallery
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/faq/"
-                      className={`nav-link ${
-                        currentRoute === "/faq/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      FAQs
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/testimonials/"
-                      className={`nav-link ${
-                        currentRoute === "/testimonials/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Testimonials
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      My Account
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/login/"
-                          className={`nav-link ${
-                            currentRoute === "/login/" ? "active" : ""
-                          }`}
-                          style={{color:"#ba8d6d"}}
-                        >
-                          Login
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link
-                          href="/register/"
-                          className={`nav-link ${
-                            currentRoute === "/register/" ? "active" : ""
-                          }`}
-                          style={{color:"#ba8d6d"}}
-                        >
-                          Register
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/privacy-policy/"
-                      className={`nav-link ${
-                        currentRoute === "/privacy-policy/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/terms-conditions/"
-                      className={`nav-link ${
-                        currentRoute === "/terms-conditions/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Terms & Conditions
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link
-                      href="/request-quote/"
-                      className={`nav-link ${
-                        currentRoute === "/request-quote/" ? "active" : ""
-                      }`}
-                      style={{color:"#ba8d6d"}}
-                    >
-                      Request A Quote
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
+             
 <li className="nav-item">
                 <Link
                   href="/blog/"
                   className={`nav-link ${
                     currentRoute === "/about-us/" ? "active" : ""
                   }`}
-                  style={{color:"#ba8d6d"}}
+                  style={{ color: navbarTextColor }} 
                 >
                   Blog
                 </Link>
@@ -544,18 +393,23 @@ const Navbar: React.FC = () => {
 
           {/* others-options */}
           <div className="others-option d-flex align-items-center">
-            <div className="option-item">
-              <div className="search-btn" onClick={handleToggleSearchModal}>
-                <i className="ri-search-line"></i>
-              </div>
-            </div>
+  <div className="option-item">
+    <div className="search-btn" onClick={handleToggleSearchModal}>
+      <i className="ri-search-line"></i>
+    </div>
+  </div>
 
-            <div className="option-item">
-              <Link href="/request-quote" className="default-btn">
-                Request A Quote
-              </Link>
-            </div>
-          </div>
+  <div className="option-item">
+    <Link 
+      href="/request-quote" 
+      className="default-btn" 
+      style={isScrolled ? { backgroundColor: "#FEDB8B", color: "#000000" } : {}}
+    >
+      Request A Quote
+    </Link>
+  </div>
+</div>
+
         </div>
       </nav>
 
@@ -570,7 +424,7 @@ const Navbar: React.FC = () => {
             <div className="modal-header d-flex align-items-center justify-content-between">
               <div>
                 <Image
-                  src={blackLogo}
+                  src={darklogo}
                   alt="Traz Logo"
                   width={100}
                   height={41}
@@ -590,7 +444,7 @@ const Navbar: React.FC = () => {
 
             <div className="modal-body">
               <Accordion allowZeroExpanded>
-                <AccordionItem uuid="a">
+                {/* <AccordionItem uuid="a">
                   <AccordionItemHeading>
                     <AccordionItemButton>Home</AccordionItemButton>
                   </AccordionItemHeading>
@@ -636,8 +490,16 @@ const Navbar: React.FC = () => {
                       </li>
                     </ul>
                   </AccordionItemPanel>
-                </AccordionItem>
-
+                </AccordionItem> */}
+<Link
+                  href="/main-home/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{color:"#ba8d6d"}}
+                >
+                  Home
+                </Link>
                 <Link
                   href="/about-us/"
                   className={`nav-link ${
@@ -648,7 +510,7 @@ const Navbar: React.FC = () => {
                   About Us
                 </Link>
 
-                <AccordionItem uuid="b">
+                {/* <AccordionItem uuid="b">
                   <AccordionItemHeading>
                     <AccordionItemButton>Portfolio</AccordionItemButton>
                   </AccordionItemHeading>
@@ -694,9 +556,9 @@ const Navbar: React.FC = () => {
                       </li>
                     </ul>
                   </AccordionItemPanel>
-                </AccordionItem>
+                </AccordionItem> */}
 
-                <AccordionItem uuid="c">
+                {/* <AccordionItem uuid="c">
                   <AccordionItemHeading>
                     <AccordionItemButton>Pages</AccordionItemButton>
                   </AccordionItemHeading>
@@ -852,9 +714,9 @@ const Navbar: React.FC = () => {
                       </li>
                     </ul>
                   </AccordionItemPanel>
-                </AccordionItem>
+                </AccordionItem> */}
 
-                <AccordionItem uuid="d">
+                {/* <AccordionItem uuid="d">
                   <AccordionItemHeading>
                     <AccordionItemButton>Blog</AccordionItemButton>
                   </AccordionItemHeading>
@@ -950,9 +812,35 @@ const Navbar: React.FC = () => {
                       </li>
                     </ul>
                   </AccordionItemPanel>
-                </AccordionItem>
-
+                </AccordionItem> */}
+<Link
+                  href="/about-us/"
+                  className={`nav-link ${
+                    currentRoute === "/portfolio-2/" ? "active" : ""
+                  }`}
+                  style={{color:"#ba8d6d"}}
+                >
+                 Our Product
+                </Link>
                 <Link
+                  href="/gallery/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{ color: navbarTextColor }} 
+                >
+                  Gallery
+                </Link>
+                <Link
+                  href="/blog/"
+                  className={`nav-link ${
+                    currentRoute === "/about-us/" ? "active" : ""
+                  }`}
+                  style={{ color: navbarTextColor }} 
+                >
+                  Blog
+                </Link>
+                {/* <Link
                   href="/contact-us/"
                   className={`nav-link ${
                     currentRoute === "/contact-us/" ? "active" : ""
@@ -960,7 +848,7 @@ const Navbar: React.FC = () => {
                   style={{color:"#ba8d6d"}}
                 >
                   Contact Us
-                </Link>
+                </Link> */}
               </Accordion>
             </div>
           </div>
