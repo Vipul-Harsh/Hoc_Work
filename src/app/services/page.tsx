@@ -4,11 +4,11 @@ import ContactFormStyleTwo from "@/components/ContactUs/ContactFormStyleTwo";
 import ServicesCard from "@/components/Services/ServicesCard";
 import Partner from "@/components/Common/Partner";
 import Footer from "@/components/Layout/Footer";
-
+import Navbar from "@/components/Layout/Navbar"
 export default function Page() {
   return (
     <>
-      <NavbarStyleTwo />
+      <Navbar/>
 
       <PageTitle 
         title="Services"

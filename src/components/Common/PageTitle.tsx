@@ -15,16 +15,16 @@ const PageTitle: React.FC<PageBannerTitleProps> = ({
   homeUrl,
 }) => {
   return (
-    <div className="page-banner-area" style={{background:"white"}}>
+    <div className="page-banner-area" >
       <div className="container-fluid">
-        <div className="page-banner-inner">
+        <div className="page-banner-inner" style={{background:"#F2EFEB"}}>
           <ul className="list text-uppercase">
             <li>
-              <Link href={homeUrl} className="text-black hover:text-[#717FF8]">
+              <Link href={homeUrl} className="text-black hover:text-[#717FF8]" style={{color:"black !important" }}>
                 {homeText}
               </Link>
             </li>
-            <li>{title}</li>
+            <li style={{color:"#7C756E"}}>{title}</li>
           </ul>
         </div>
       </div>

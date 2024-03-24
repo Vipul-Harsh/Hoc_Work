@@ -14,7 +14,13 @@ export default function Page() {
     <>
       <Navbar/>
       <HeroBanner/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <About/>
+      
+      
       <Services/>
       <HeroBanner2/>
       <Projects/>

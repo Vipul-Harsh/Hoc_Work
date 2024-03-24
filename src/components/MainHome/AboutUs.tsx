@@ -81,7 +81,7 @@ const AboutUsContent: React.FC = () => {
                       </ul>
 
                       <div className="about-btn">
-                        <Link href="/about-us" className="default-btn">
+                        <Link href="/about-us" className="about-button">
                           Know More About Us
                         </Link>
                       </div>

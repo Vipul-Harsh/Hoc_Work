@@ -36,7 +36,7 @@ const Partner: React.FC = () => {
       {partnerData && (
         <div className="partner-area pb-75">
           <div className="container-fluid">
-            <h1 className="  fw-normal fs-30" >Our Partners</h1>
+          
             <div className="row g-0 justify-content-center align-items-center">
               {partnerData &&
                 partnerData.map((value, i) => (

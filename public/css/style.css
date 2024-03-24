@@ -780,6 +780,19 @@ About Area CSS
   top: 145px;
   z-index: -1;
 }
+.about-button{
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: var(--whiteColor);
+  font-size: 18px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 1px solid rgb(254, 219, 139);
+}
+.about-button:hover{
+  background:rgb(254, 219, 139);
+}
 
 .about-two-content {
   position: relative;
@@ -2496,7 +2509,7 @@ Blog Area CSS
   bottom: 25px;
 }
 .blog-item:hover .content.wrap-color {
-  background: black;
+  background: #383838;
 }
 .blog-item:hover .content.wrap-color h3 a {
   color: white;

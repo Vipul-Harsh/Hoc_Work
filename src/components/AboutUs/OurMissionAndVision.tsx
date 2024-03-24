@@ -18,7 +18,7 @@ const OurMissionAndVision: React.FC = () => {
       >
         <AccordionItem uuid="a">
           <AccordionItemHeading>
-            <AccordionItemButton>Our Mission</AccordionItemButton>
+            <AccordionItemButton style={{background:"#BA8D6D"}}>Our Mission</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
             <p>
@@ -31,7 +31,7 @@ const OurMissionAndVision: React.FC = () => {
 
         <AccordionItem uuid="b">
           <AccordionItemHeading>
-            <AccordionItemButton>Our Vision</AccordionItemButton>
+            <AccordionItemButton style={{background:"#BA8D6D"}}>Our Vision</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
             <p>

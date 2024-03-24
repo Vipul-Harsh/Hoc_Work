@@ -56,7 +56,78 @@ const Projects: React.FC = () => {
     null
   );
   const [isHovered, setIsHovered] = useState(false);
-
+  const [activeTab, setActiveTab] = useState("Dimensions");
+  const renderContent = () => {
+    switch (activeTab) {
+      case "Dimensions":
+        return (
+          <div className="dim">
+           <div className="box-dimension" style={{display:"flex",justifyContent:"space-around"}}>
+           <div className="dim-head" style={{textAlign:"center"}} ><h4>Height</h4></div>
+            <div className="dim-quantity" style={{textAlign:"center"}}>
+            <p
+              className="text-to-hover"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Dimension 1
+            </p>
+            </div>
+            </div>
+            <div className="box-dimension" style={{display:"flex",justifyContent:"space-around"}}>
+            <div className="dim-head" style={{textAlign:"center"}}><h4>Breadth</h4></div>
+            <div className="dim-quantity" style={{textAlign:"center"}}>
+            <p
+              className="text-to-hover"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Dimension 2
+            </p>
+            </div>
+            </div>
+            <div className="box-dimension" style={{display:"flex",justifyContent:"space-around",textAlign:"center"}}>
+              <div className="dim-head" style={{textAlign:"center"}}><h4>Length</h4></div>
+            <div className="dim-quantity" style={{textAlign:"center"}}>
+            <p
+              className="text-to-hover"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Dimension 3
+            </p>
+            </div>
+           
+            </div>
+            {/* <h3>Height</h3>
+            
+            <p className="text-to-hover">Dimension 2</p>
+            <h3>Height</h3>
+            <p className="text-to-hover">Dimension 3</p> */}
+          </div>
+        );
+      case "Materials":
+        return <div className="materials">{/* Content for Materials */}
+        <div className="dim">
+            <p
+              className="text-to-hover"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+             Material 1
+            </p>
+            <p className="text-to-hover">Material 2</p>
+            <p className="text-to-hover">Material 3</p>
+          </div>
+        </div>;
+      case "Application":
+        return (
+          <div className="application">{/* Content for Application */}</div>
+        );
+      default:
+        return null;
+    }
+  };
   const openModal = (project: ProjectType) => {
     setSelectedProject(project);
     setIsModalOpen(true);
@@ -90,6 +161,7 @@ const Projects: React.FC = () => {
                         <button
                           className="projects-btn"
                           onClick={() => openModal(value)}
+                          style={{border:"none"}}
                         >
                           SEE CASE STUDIES
                         </button>
@@ -127,6 +199,7 @@ const Projects: React.FC = () => {
                         <button
                           className="projects-btn"
                           onClick={() => openModal(value)}
+                          style={{border:"none"}}
                         >
                           SEE CASE STUDIES
                         </button>
@@ -154,15 +227,21 @@ const Projects: React.FC = () => {
 
       {isModalOpen && (
         <div className="modal-overlay">
-          <div className="modal-content" style={{ maxWidth: "50%" }}>
+          <div
+            className="modal-content"
+            style={{ maxWidth: "59%", height: "95%" }}
+          >
             <div className="headingtext">
               <button className="close-btn" onClick={closeModal}>
                 Close
               </button>
               <h2>{selectedProject?.title}</h2>
             </div>
-            <div className="cont-row" style={{ display: "flex" }}>
-              <div className="cont-item">
+            <div
+              className="cont-row"
+              style={{ display: "flex", height: "100%",flexWrap:"wrap" }}
+            >
+              <div className="cont-item" >
                 <Image
                   src={
                     isHovered
@@ -176,35 +255,52 @@ const Projects: React.FC = () => {
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>
-              <div className="cont-item">
+              <div
+                className="cont-item"
+                style={{ display: "flex", flexDirection: "column",justifyContent:"space-between" }}
+              >
                 <div
                   className="dimension"
                   style={{
-                    border: "1px solid black",
-                    height: "60%",
+                    boxShadow: "0 0 5px rgba(0, 0, 0, 0.3);",
+                    height: "50%",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
                   }}
                 >
-                  <div className="heading-modal">
-                    <h1>Dimensions</h1>
-                  </div>
-                  <div className="dim">
-                    <p
-                      className="text-to-hover"
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
+                 
+                  <div className="buttons-container" style={{display:"flex",justifyContent:"space-between"}}>
+                    <button
+                      className={activeTab === "Dimensions" ? "active" : ""}
+                      onClick={() => setActiveTab("Dimensions")}
+                      style={{background:"#BA8D6D",border:"none",color:"white",width:"31.33%"}}
                     >
-                      Dimension 1
-                    </p>
-                    <p className="text-to-hover">Dimension 2</p>
-                    <p className="text-to-hover">Dimension 3</p>
-                    <div className="full-width-cont">Full Width Div</div>
+                      Dimensions
+                    </button>
+                    <button
+                      className={activeTab === "Materials" ? "active" : ""}
+                      onClick={() => setActiveTab("Materials")}
+                      style={{background:"#BA8D6D",border:"none",color:"white",width:"31.33%"}}
+                    >
+                      Materials
+                    </button>
+                    <button
+                      className={activeTab === "Application" ? "active" : ""}
+                      onClick={() => setActiveTab("Application")}
+                      style={{background:"#BA8D6D",border:"none",color:"white",width:"31.33%"}}
+                    >
+                      Application
+                    </button>
                   </div>
+                  {renderContent()}
                 </div>
-
-               
+                <div className="full-width-cont" >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  saepe eius maxime. Amet assumenda est, veritatis ducimus non
+                  impedit beatae facere doloremque error ex minima velit.
+                  Possimus dolores aspernatur tempore.
+                </div>
               </div>
             </div>
             {/* Add more details about the project here */}
@@ -230,30 +326,32 @@ const Projects: React.FC = () => {
           margin: 0 auto;
           padding: 20px;
         }
-        
+
         .cont-row {
           display: flex;
           justify-content: space-between;
-          border: 1px solid #000;
+          
           margin-bottom: 20px;
         }
-        
+
         .cont-item {
           flex: 1;
           padding: 10px;
-          border-right: 1px solid #000;
+          
           text-align: center;
         }
-      
+
         .cont-item:last-child {
           border-right: none;
         }
-      
+
         .full-width-cont {
           width: 100%;
-          border: 1px solid #000;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          
           padding: 20px;
-          text-align: center;
+          text-align: justify;
+          height: auto;
         }
 
         .modal-content {

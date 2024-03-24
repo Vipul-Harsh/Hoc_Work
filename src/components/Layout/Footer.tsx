@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import whiteLogo from "../../../public/images/white-logo.svg";
+import logo from "/public/images/main-banner/HOC New Year 2024.png";
 import NewsletterForm from "./NewsletterForm";
 
 // Social Links
@@ -71,7 +72,12 @@ const Footer: React.FC = () => {
               <div className="single-footer-widget">
                 <div className="widget-logo">
                   <Link href="/">
-                    <Image src={whiteLogo} alt="image" width={113} height={54} />
+                    <Image
+                      src={logo}
+                      alt="image"
+                      width={113}
+                      height={54}
+                    />
                   </Link>
                 </div>
                 <p>
@@ -121,9 +127,7 @@ const Footer: React.FC = () => {
                     {pageLinksData &&
                       pageLinksData.map((value, i) => (
                         <li key={i}>
-                          <a href={value.link}>
-                            {value.name}
-                          </a>
+                          <a href={value.link}>{value.name}</a>
                         </li>
                       ))}
                   </ul>
@@ -147,14 +151,106 @@ const Footer: React.FC = () => {
 
       <div className="copyright-area">
         <div className="container">
-          <div className="copyright-area-content">
-            <p>
-              © <span>Traz</span> Template, All Rights Reserved By
-              <a href="https://envytheme.com/" target="_blank">
-                {" "}
-                EnvyTheme
-              </a>
-            </p>
+          <div
+            className="copyright-area-content"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <div className="left-content">
+              <ul
+                className="copyright-list"
+                style={{
+                  listStyle: "none",
+                  display: "flex",
+                 
+                  paddingLeft: "0",
+                  gap:"20px"
+                }}
+              >
+                <li>
+                  <a
+                    href="#"
+                    style={{ color: "#ba8d6d", textDecoration: "none" }}
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    style={{ color: "#ba8d6d", textDecoration: "none" }}
+                  >
+                    Terms & Condition
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    style={{ color: "#ba8d6d", textDecoration: "none" }}
+                  >
+                    Cancellation Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    style={{ color: "#ba8d6d", textDecoration: "none" }}
+                  >
+                    Disclaimer
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="right-content">
+              <div className="social-icons">
+                <a
+                  href="#"
+                  target="_blank"
+                  style={{
+                    color: "#ba8d6d",
+                    textDecoration: "none",
+                    marginRight: "15px",
+                  }}
+                >
+                  <i className="ri-facebook-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  style={{
+                    color: "#ba8d6d",
+                    textDecoration: "none",
+                    marginRight: "15px",
+                  }}
+                >
+                  <i className="ri-twitter-fill"></i>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  style={{ color: "#ba8d6d", textDecoration: "none" }}
+                >
+                  <i className="ri-instagram-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="copyright-area-content"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <div className="left-content">
+              <p>
+                © <span>2024</span> HOC. All Rights Reserved.
+              </p>
+            </div>
+            <div className="right-content">
+              <p>
+                Designed & Maintained By{" "}
+                <a href="https://envytheme.com/" target="_blank">
+                  Rightlabs
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

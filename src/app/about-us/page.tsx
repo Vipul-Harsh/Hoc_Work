@@ -28,7 +28,7 @@ export default function Page() {
 
       <QuoteText />
 
-      <div className="ptb-100">
+      <div className="ptb-60">
         <ClientsFeedbackSlider />
       </div>
 
@@ -36,13 +36,13 @@ export default function Page() {
 
       <TeamMemberStyle2 />
 
-      <div className="pt-100">
+      {/* <div className="pt-100">
         <Partner />
-      </div>
+      </div> */}
 
-      <div className="pb-100">
-        <ContactFormStyleTwo />
-      </div>
+      {/* <div className="pb-100">
+        
+      </div> */}
       
       <Footer />
     </>
