@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
-import close from "/public/images/client/close.svg"
+import close from "/public/images/client/close.svg";
 const projectsData = [
   // ... (same data)
   {
@@ -62,42 +62,60 @@ const Projects: React.FC = () => {
       case "Dimensions":
         return (
           <div className="dim">
-           <div className="box-dimension" style={{display:"flex",justifyContent:"space-around"}}>
-           <div className="dim-head" style={{textAlign:"center"}} ><h4>Height</h4></div>
-            <div className="dim-quantity" style={{textAlign:"center"}}>
-            <p
-              className="text-to-hover"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+            <div
+              className="box-dimension"
+              style={{ display: "flex", justifyContent: "space-around" }}
             >
-              Dimension 1
-            </p>
+              <div className="dim-head" style={{ textAlign: "center" }}>
+                <h4>Height</h4>
+              </div>
+              <div className="dim-quantity" style={{ textAlign: "center" }}>
+                <p
+                  className="text-to-hover"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  Dimension 1
+                </p>
+              </div>
             </div>
-            </div>
-            <div className="box-dimension" style={{display:"flex",justifyContent:"space-around"}}>
-            <div className="dim-head" style={{textAlign:"center"}}><h4>Breadth</h4></div>
-            <div className="dim-quantity" style={{textAlign:"center"}}>
-            <p
-              className="text-to-hover"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+            <div
+              className="box-dimension"
+              style={{ display: "flex", justifyContent: "space-around" }}
             >
-              Dimension 2
-            </p>
+              <div className="dim-head" style={{ textAlign: "center" }}>
+                <h4>Breadth</h4>
+              </div>
+              <div className="dim-quantity" style={{ textAlign: "center" }}>
+                <p
+                  className="text-to-hover"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  Dimension 2
+                </p>
+              </div>
             </div>
-            </div>
-            <div className="box-dimension" style={{display:"flex",justifyContent:"space-around",textAlign:"center"}}>
-              <div className="dim-head" style={{textAlign:"center"}}><h4>Length</h4></div>
-            <div className="dim-quantity" style={{textAlign:"center"}}>
-            <p
-              className="text-to-hover"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+            <div
+              className="box-dimension"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                textAlign: "center",
+              }}
             >
-              Dimension 3
-            </p>
-            </div>
-           
+              <div className="dim-head" style={{ textAlign: "center" }}>
+                <h4>Length</h4>
+              </div>
+              <div className="dim-quantity" style={{ textAlign: "center" }}>
+                <p
+                  className="text-to-hover"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  Dimension 3
+                </p>
+              </div>
             </div>
             {/* <h3>Height</h3>
             
@@ -107,19 +125,22 @@ const Projects: React.FC = () => {
           </div>
         );
       case "Materials":
-        return <div className="materials">{/* Content for Materials */}
-        <div className="dim">
-            <p
-              className="text-to-hover"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-             Material 1
-            </p>
-            <p className="text-to-hover">Material 2</p>
-            <p className="text-to-hover">Material 3</p>
+        return (
+          <div className="materials">
+            {/* Content for Materials */}
+            <div className="dim">
+              <p
+                className="text-to-hover"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Material 1
+              </p>
+              <p className="text-to-hover">Material 2</p>
+              <p className="text-to-hover">Material 3</p>
+            </div>
           </div>
-        </div>;
+        );
       case "Application":
         return (
           <div className="application">{/* Content for Application */}</div>
@@ -143,12 +164,12 @@ const Projects: React.FC = () => {
         className="projects-area bg-wrap-with-black ptb-100"
         style={{ background: "white" }}
       >
-         <div className="section-title-wrap" style={{marginLeft:"9%"}}>
-                  <span>PROJECTS</span>
-                  <h2 style={{ color: "black" }}>
-                    Selected Projects That We Really Want To Show You
-                  </h2>
-                </div>
+        <div className="section-title-wrap" style={{ marginLeft: "9%" }}>
+          <span>PROJECTS</span>
+          <h2 style={{ color: "black" }}>
+            Selected Projects That We Really Want To Show You
+          </h2>
+        </div>
         <div className="container">
           {projectsData && (
             <div className="row justify-content-center">
@@ -167,7 +188,7 @@ const Projects: React.FC = () => {
                         <button
                           className="projects-btn"
                           onClick={() => openModal(value)}
-                          style={{border:"none"}}
+                          style={{ border: "none" }}
                         >
                           SEE MORE
                         </button>
@@ -184,8 +205,6 @@ const Projects: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-md-6">
-               
-
                 <div className="projects-inner-border">
                   {projectsData.slice(2, 4).map((value, i) => (
                     <div className="projects-item" key={i}>
@@ -200,7 +219,7 @@ const Projects: React.FC = () => {
                         <button
                           className="projects-btn"
                           onClick={() => openModal(value)}
-                          style={{border:"none"}}
+                          style={{ border: "none" }}
                         >
                           SEE MORE
                         </button>
@@ -218,11 +237,11 @@ const Projects: React.FC = () => {
             </div>
           )}
 
-          <div className="projects-btn">
+          {/* <div className="projects-btn">
             <Link href="/portfolio-2" style={{ fontSize: "24px" }}>
               VIEW ALL PROJECTS
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -234,15 +253,15 @@ const Projects: React.FC = () => {
           >
             <div className="headingtext">
               <button className="close-btn" onClick={closeModal}>
-                <Image src={close} width={30} height={30}/>
+                <Image src={close} width={30} height={30} alt="close" />
               </button>
               <h2>{selectedProject?.title}</h2>
             </div>
-            <div
+            {/* <div
               className="cont-row"
               style={{ display: "flex", height: "100%",flexWrap:"wrap" }}
             >
-              <div className="cont-item" >
+              <div className="cont-item" style={{width:"50%"}} >
                 <Image
                   src={
                     isHovered
@@ -258,7 +277,7 @@ const Projects: React.FC = () => {
               </div>
               <div
                 className="cont-item"
-                style={{ display: "flex", flexDirection: "column",justifyContent:"space-between" }}
+                style={{ display: "flex", flexDirection: "column",justifyContent:"space-between" ,width:"50%"}}
               >
                 <div
                   className="dimension"
@@ -303,6 +322,94 @@ const Projects: React.FC = () => {
                   Possimus dolores aspernatur tempore.
                 </div>
               </div>
+            </div> */}
+            <div
+              className="cont-row"
+              style={{ display: "flex", height: "100%", flexWrap: "wrap" }}
+            >
+              <div className="cont-item" >
+                <Image
+                  src={
+                    isHovered
+                      ? selectedProject?.image2 ?? "/default-image.jpg"
+                      : selectedProject?.image ?? "/default-image.jpg"
+                  }
+                  alt="image"
+                  width={100}
+                  height={100}
+                  className="image-fit"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div
+                className="cont-item"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                 
+                }}
+              >
+                <div
+                  className="dimension"
+                  style={{
+                    boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
+                    height: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div
+                    className="buttons-container"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <button
+                      className={activeTab === "Dimensions" ? "active" : ""}
+                      onClick={() => setActiveTab("Dimensions")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Dimensions
+                    </button>
+                    <button
+                      className={activeTab === "Materials" ? "active" : ""}
+                      onClick={() => setActiveTab("Materials")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Materials
+                    </button>
+                    <button
+                      className={activeTab === "Application" ? "active" : ""}
+                      onClick={() => setActiveTab("Application")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Application
+                    </button>
+                  </div>
+                  {renderContent()}
+                </div>
+                <div className="full-width-cont">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  saepe eius maxime. Amet assumenda est, veritatis ducimus non
+                  impedit beatae facere doloremque error ex minima velit.
+                  Possimus dolores aspernatur tempore.
+                </div>
+              </div>
             </div>
             {/* Add more details about the project here */}
           </div>
@@ -327,18 +434,28 @@ const Projects: React.FC = () => {
           margin: 0 auto;
           padding: 20px;
         }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+          .cont-row {
+            flex-direction: column;
+          }
+
+          .cont-item {
+            width: 100%;
+          }
+        }
 
         .cont-row {
           display: flex;
           justify-content: space-between;
-          
+
           margin-bottom: 20px;
         }
 
         .cont-item {
           flex: 1;
           padding: 10px;
-          
+
           text-align: center;
         }
 
@@ -349,7 +466,7 @@ const Projects: React.FC = () => {
         .full-width-cont {
           width: 100%;
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-          
+
           padding: 20px;
           text-align: justify;
           height: auto;

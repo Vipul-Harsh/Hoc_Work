@@ -237,7 +237,7 @@ const Projects: React.FC = () => {
               </button>
               <h2>{selectedProject?.title}</h2>
             </div>
-            <div
+            {/* <div
               className="cont-row"
               style={{ display: "flex", height: "100%",flexWrap:"wrap" }}
             >
@@ -302,6 +302,94 @@ const Projects: React.FC = () => {
                   Possimus dolores aspernatur tempore.
                 </div>
               </div>
+            </div> */}
+             <div
+              className="cont-row"
+              style={{ display: "flex", height: "100%", flexWrap: "wrap" }}
+            >
+              <div className="cont-item" >
+                <Image
+                  src={
+                    isHovered
+                      ? selectedProject?.image2 ?? "/default-image.jpg"
+                      : selectedProject?.image ?? "/default-image.jpg"
+                  }
+                  alt="image"
+                  width={100}
+                  height={100}
+                  className="image-fit"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <div
+                className="cont-item"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                 
+                }}
+              >
+                <div
+                  className="dimension"
+                  style={{
+                    boxShadow: "0 0 5px rgba(0, 0, 0, 0.3)",
+                    height: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div
+                    className="buttons-container"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <button
+                      className={activeTab === "Dimensions" ? "active" : ""}
+                      onClick={() => setActiveTab("Dimensions")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Dimensions
+                    </button>
+                    <button
+                      className={activeTab === "Materials" ? "active" : ""}
+                      onClick={() => setActiveTab("Materials")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Materials
+                    </button>
+                    <button
+                      className={activeTab === "Application" ? "active" : ""}
+                      onClick={() => setActiveTab("Application")}
+                      style={{
+                        background: "#BA8D6D",
+                        border: "none",
+                        color: "white",
+                        width: "31.33%",
+                      }}
+                    >
+                      Application
+                    </button>
+                  </div>
+                  {renderContent()}
+                </div>
+                <div className="full-width-cont">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  saepe eius maxime. Amet assumenda est, veritatis ducimus non
+                  impedit beatae facere doloremque error ex minima velit.
+                  Possimus dolores aspernatur tempore.
+                </div>
+              </div>
             </div>
             {/* Add more details about the project here */}
           </div>
@@ -326,6 +414,16 @@ const Projects: React.FC = () => {
           margin: 0 auto;
           padding: 20px;
         }
+        @media (max-width: 768px) {
+          .cont-row {
+            flex-direction: column;
+          }
+
+          .cont-item {
+            width: 100%;
+          }
+        }
+
 
         .cont-row {
           display: flex;

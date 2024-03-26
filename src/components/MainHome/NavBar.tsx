@@ -160,7 +160,7 @@ const Navbar: React.FC = () => {
               </li> */}
 <li className="nav-item">
                 <Link
-                  href="/main-home/"
+                  href="/"
                   className={`nav-link ${
                     currentRoute === "/about-us/" ? "active" : ""
                   }`}

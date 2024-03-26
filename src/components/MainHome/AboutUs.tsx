@@ -6,13 +6,13 @@ import Image from "next/image";
 
 import arrowShape from "../../../public/images/about/arrow-shape.png";
 import aboutImg2 from "../../../public/images/about/about2.jpg";
-import archiTextImg from "../../../public/images/about/archi-text.png";
+import archiTextImg from "../../../public/images/main-banner/textimage2.png";
 import arrowIcon from "../../../public/images/about/arrow.svg";
 
 const AboutUsContent: React.FC = () => {
   return (
     <>
-      <div className="about-area ptb-100" style={{background:"#24231D"}}>
+      <div className="about-area ptb-100" style={{ background: "#24231D" }}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-12">
@@ -25,7 +25,12 @@ const AboutUsContent: React.FC = () => {
                 data-aos-once="true"
               >
                 <div className="arrow-shape">
-                  <Image src={arrowShape} alt="Shape" width={182} height={128} />
+                  <Image
+                    src={arrowShape}
+                    alt="Shape"
+                    width={182}
+                    height={128}
+                  />
                 </div>
               </div>
             </div>
@@ -40,42 +45,67 @@ const AboutUsContent: React.FC = () => {
               >
                 <div className="title">
                   <h2>
-                    Who We Are: Leading <span>Architectural Agency</span> Who
-                    Create Unique Living Spaces
+                    Who We Are: Leading <span>Furniture Design Firm</span>{" "}
+                    Crafting Unique Living Spaces
                   </h2>
                 </div>
 
                 <div className="row justify-content-center">
                   <div className="col-lg-5">
                     <div className="inner-image">
-                      <Image src={aboutImg2} alt="about" width={690} height={590} />
+                      <Image
+                        src={aboutImg2}
+                        alt="about"
+                        width={690}
+                        height={590}
+                      />
                     </div>
                   </div>
 
                   <div className="col-lg-7">
                     <div className="inner-content">
                       <p>
-                        We are a leading architecture firm dedicated to creating
-                        visionary designs that transcend expectations. With our
-                        team of highly skilled architects and designers, we
-                        specialize in crafting.
+                        We are a leading furniture firm dedicated to crafting
+                        visionary designs that exceed expectations. With our
+                        team of highly skilled designers and craftsmen, we
+                        specialize in creating exquisite furniture pieces.
                       </p>
 
                       <ul className="list">
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Innovative Design Approach
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Highly Skilled Expertise and Specialization
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />A client-centric
-                          approach for an architectural company
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
+                          A client-centric approach for an architectural company
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Sustainable Design Practices
                         </li>
                       </ul>
