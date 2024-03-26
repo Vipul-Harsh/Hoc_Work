@@ -254,6 +254,26 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      @media (max-width: 565px) {
+    .copyright-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (max-width: 565px) {
+  .copyright-area-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .left-content, .right-content {
+      margin-bottom: 20px;
+  }
+}
+
+
+ `} </style>
     </>
   );
 };
