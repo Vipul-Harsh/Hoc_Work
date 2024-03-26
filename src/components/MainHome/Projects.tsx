@@ -233,7 +233,7 @@ const Projects: React.FC = () => {
           >
             <div className="headingtext">
               <button className="close-btn" onClick={closeModal}>
-              <Image src={close} width={30} height={30}/>
+              <Image alt="close"  src={close} width={30} height={30}/>
               </button>
               <h2>{selectedProject?.title}</h2>
             </div>
